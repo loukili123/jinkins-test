@@ -4,10 +4,7 @@ pipeline {
     stages {
         stage('NPM Build') {
           steps {
-			bat "npm cache clean --force"
-			bat "npm install -g npm@latest --force"
-			bat "npm cache clean --force"
-            bat "npm install"
+            bat "npm install -d"
             bat "npm start"
           }
         }
